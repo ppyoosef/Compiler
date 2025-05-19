@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Calc App Compiler",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+      "main.cpp",
+      "include/compiler/compiler.cpp",
+      "include/compiler/tokenizer.cpp",
+      "include/compiler/parser.cpp",
+      "include/compiler/emitter.cpp",
+      "include/vm/vm.cpp",
+      "-o",
+      "build/min-compiler.exe",
+      "-I${workspaceFolder}/include",
+      "-L${workspaceFolder}/lib",
+      ],
+      "group": {
+      "kind": "build",
+      "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "options": {
+      "shell": {
+        "executable": "C:\\Windows\\System32\\cmd.exe",
+        "args": ["/d", "/c"]
+      }
+      }
+    },
+    {
+      "label": "Build Calc App VM",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+      "src/core/vm.cpp",
+      "-o",
+      "build/min-vm.exe",
+      "-I${workspaceFolder}/include",
+      "-L${workspaceFolder}/lib",
+      ],
+      "group": {
+      "kind": "build",
+      "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "options": {
+      "shell": {
+        "executable": "C:\\Windows\\System32\\cmd.exe",
+        "args": ["/d", "/c"]
+      }
+      }
+    }
+  ]
+}

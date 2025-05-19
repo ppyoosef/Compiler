@@ -1,0 +1,3 @@
+input x
+let y = x + 2
+print y
