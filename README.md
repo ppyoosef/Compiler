@@ -1,4 +1,4 @@
-# Compiler in CPP (Under development)
+## Compiler in CPP (Under development)
 
 ### This is sample compiler developed in C++
 
